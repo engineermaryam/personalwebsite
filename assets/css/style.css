@@ -402,7 +402,9 @@ ul { list-style: none; }
   width: max-content;
   animation: carousel-scroll 20s linear infinite;
 }
-.community-carousel:hover .community-carousel-track { animation-play-state: paused; }
+@media (hover: hover) and (pointer: fine) {
+  .community-carousel:hover .community-carousel-track { animation-play-state: paused; }
+}
 @keyframes carousel-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
