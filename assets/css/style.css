@@ -126,8 +126,16 @@ ul { list-style: none; }
   font-weight: 900;
   font-size: 20px;
   color: var(--dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .nav-logo span { color: var(--orange); }
+.nav-logo-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+}
 
 .nav-links {
   display: flex;
