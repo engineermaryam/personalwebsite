@@ -395,12 +395,16 @@ ul { list-style: none; }
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0, #000 60px, #000 calc(100% - 60px), transparent 100%);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .community-carousel-track {
   display: flex;
   gap: 18px;
   width: max-content;
   animation: carousel-scroll 20s linear infinite;
+  will-change: transform;
+  -webkit-tap-highlight-color: transparent;
 }
 @media (hover: hover) and (pointer: fine) {
   .community-carousel:hover .community-carousel-track { animation-play-state: paused; }
@@ -415,6 +419,10 @@ ul { list-style: none; }
   width: auto;
   border-radius: 16px;
   object-fit: cover;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 /* ---------- Skills ---------- */
@@ -514,7 +522,7 @@ blockquote em { color: var(--orange); font-style: normal; }
   .community-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .carousel-photo { height: 220px; }
-  .community-carousel-track { animation-duration: 26s; }
+  .community-carousel-track { animation-duration: 18s; }
   .hero-actions .btn { flex: 1; justify-content: center; }
   .contact-actions { flex-direction: column; align-items: flex-start; }
 }
